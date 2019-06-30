@@ -25,6 +25,7 @@ class RankspiderSpider(Spider):
         'Referer': 'https://www.qimai.cn/rank/index/brand/grossing/device/iphone/country/cn/genre/5000/date/2019-06-30',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36'
     }
+    # 这里的参数是爬取iphone游戏畅销榜, 具体参数可根据自己需求调整
     params = {
         'brand': 'grossing',
         'country': 'cn',

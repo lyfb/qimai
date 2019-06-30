@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/6/30 17:22
+# @Author  : xuzhihai0723
+# @Email   : 18829040039@163.com
+# @File    : utils.py
+# @Software: PyCharm
+
 import execjs
 import requests
 

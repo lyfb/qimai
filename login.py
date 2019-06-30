@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/6/30 17:21
+# @Author  : xuzhihai0723
+# @Email   : 18829040039@163.com
+# @File    : x.py
+# @Software: PyCharm
+
 import requests
 import time
 from urllib.request import urlretrieve
@@ -26,7 +33,7 @@ def get_synct():
     resp = requests.get('https://www.qimai.cn/rank', headers=headers)
     cookies = resp.cookies.get_dict()
     synct = cookies.get('synct')
-    print(synct)
+    # print(synct)
     return synct
 
 def get_analysis(synct):
@@ -34,7 +41,7 @@ def get_analysis(synct):
         js = f.read().decode()
     ctx = execjs.compile(js)
     analysis = ctx.call('getLoginAnalysis', synct)
-    print(analysis)
+    # print(analysis)
     return analysis
 
 def login():
@@ -55,6 +62,8 @@ def login():
         print(r.json()['msg'])
         cookies = r.cookies.get_dict()
         return cookies
+    else:
+        print('r.json()['msg']')
 
 if __name__ == '__main__':
     cookies = login()
